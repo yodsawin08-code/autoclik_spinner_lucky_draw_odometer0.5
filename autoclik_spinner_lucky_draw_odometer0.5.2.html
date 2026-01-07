@@ -962,7 +962,7 @@
 
         // --- DATA STRUCTURE (UPDATED FOR NEW PRIZES & PRICES) ---
         const defaultPrizes = [
-            { name: "iPhone 17", value: "มูลค่ารางวัลละ 29,900 บาท", total: 1, current: 1 },
+            { name: "iPhone 17 / 256GB", value: "มูลค่ารางวัลละ 29,900 บาท", total: 1, current: 1 },
             { name: "iPad Gen11 ความจุ 128 GB / WIFI", value: "มูลค่ารางวัลละ 12,900 บาท", total: 2, current: 2 },
             { name: "Xiaomi Robot Vacuum E5", value: "มูลค่ารางวัลละ 3,990 บาท", total: 2, current: 2 },
             { name: "Xiaomi Smart Air Purifier 4 Compact", value: "มูลค่ารางวัลละ 2,790 บาท", total: 4, current: 4 },
@@ -1236,7 +1236,7 @@
 
         function getPrizeImage(prizeName) {
             const prizeMappings = {
-                "iPhone 17": "iPhone_17.png",
+                "iPhone 17 / 256GB": "iPhone_17.png",
                 "iPad Gen11 ความจุ 128 GB / WIFI": "iPad_128_GB_WIFI.png",
                 "Xiaomi Robot Vacuum E5": "Xiaomi_Robot_Vacuum_E5.png",
                 "Xiaomi Smart Air Purifier 4 Compact": "Xiaomi_Smart_Air_Purifier_4_Compact.png",
@@ -1975,7 +1975,7 @@
             const dLine1 = document.getElementById('display-name-line1');
 
             // TIER 1 (iPhone)
-            if (prizeName.includes("iPhone")) {
+            if (prizeName.includes("iPhone 17 / 256GB")) {
                 document.body.classList.add('shake-active'); 
                 setTimeout(() => document.body.classList.remove('shake-active'), 5000); 
                 document.getElementById('supernova').classList.add('supernova-active');
@@ -2172,7 +2172,7 @@
             triggerAdvancedEffects(currentPrize.name);
             
             let winSoundSrc = "sound_win.mp3"; 
-            if (currentPrize.name.includes("iPhone")) winSoundSrc = "win1.mp3";
+            if (currentPrize.name.includes("iPhone 17 / 256GB")) winSoundSrc = "win1.mp3";
             else if (currentPrize.name.includes("iPad Gen11 ความจุ 128 GB / WIFI") || currentPrize.name.includes("Vacuum")) winSoundSrc = "win2.mp3";
             else if (currentPrize.name.includes("Purifier") || currentPrize.name.includes("Watch")) winSoundSrc = "win3.mp3";
 
@@ -2293,3 +2293,4 @@
 </body>
 
 </html>
+
